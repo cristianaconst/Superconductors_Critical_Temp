@@ -9,9 +9,11 @@
 library(ggplot2)
 library(corrplot)
 
+library(Rtsne) # t-Distributed Stochastic Neighbor Embedding
 library(caret) # Cross-Validation
 library(e1071) # SVM model
 library(Metrics) # RSME metric
+
 
 
 ### Introduction
@@ -20,15 +22,23 @@ library(Metrics) # RSME metric
 original_data <- read.csv("Data/train.csv")
 dim(original_data)
 
-# Output:
-# 21263    82
+
+# Data structure
+str(original_data) # 3 integer and 79 continuous numerical variables
+summary(original_data) #The output is too large
+
+
+# Check for missing values
+sum(is.na(original_data)) # No missing values
+
 
 
 ### Exploratory Data Analysis
+
 # Plot Critical Temperature histogram - target variable
 ggplot(original_data, # Use all of the entries in the dataset
       aes(x = critical_temp)) + # The values on the x-axis
-      geom_histogram(aes(y = ..density..), col = 'gray66', # Plotting a histogram
+      geom_histogram(aes(y = after_stat(density)), col = 'gray66', # Plotting a histogram
                      fill = 'gray', binwidth = 2.5) + 
       labs(x = 'Critical Temperature', y = 'Density') + # Labels of x and y-axis
       geom_density(col = 'red') + # Plot the density line
@@ -37,9 +47,22 @@ ggplot(original_data, # Use all of the entries in the dataset
 
 summary(original_data$critical_temp)
 
-# Output:
-#      Min.   1st Qu.    Median      Mean   3rd Qu.      Max.
-#  0.00021   5.36500  20.00000  34.42122  63.00000 185.00000
+
+
+# Find the material with the critical temperature 185K
+material_data <- read.csv('Data/unique_m.csv')
+outlier_material <- material_data$material[material_data$critical_temp == 185]
+outlier_material # H2S - hydrogen sulphide
+
+
+## Standardization
+# Separate features and target
+target <- original_data["critical_temp"]
+original_data_features <- subset(original_data, select = -critical_temp)
+
+# Standardize dataset
+data_standardized <- scale(original_data_features)
+
 
 
 # Plot the correlation matrix
