@@ -96,27 +96,5 @@ for (perplexity in perplexities) {
 
 
 
-set.seed(123)
-tSNE_results_30_08_200 <- Rtsne(data_standardized, check_duplicates = FALSE) #it takes 2 minutes to run
-    # perplexity: 30; theta: 0.8; eta: 200
-plot(tSNE_results_30_08_200$Y, asp = 1)
-
-set.seed(123)
-tSNE_results_50 <- Rtsne(data_standardized, check_duplicates = FALSE, perplexity = 50)
-    # perplexity: 50; theta: 0.5; eta: 200
-plot(tSNE_results_50$Y, asp = 1)
-
-
-set.seed(123)
-tSNE_results_200 <- Rtsne(data_standardized, check_duplicates = FALSE, perplexity = 200)
-    # perplexity: 200; theta: 0.5; eta: 200
-plot(tSNE_results_200$Y, asp = 1)
-
-
-set.seed(123)
-tSNE_results_500 <- Rtsne(data_standardized, check_duplicates = FALSE, perplexity = 500)
-    # 
-plot(tSNE_results_200$Y, asp = 1)
-
 # Plot results
 plot(tSNE_results$Y, asp = 1)

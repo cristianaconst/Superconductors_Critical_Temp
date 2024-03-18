@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1710374983 "c:/Users/crist/Uni/GitHub_Projects/CriticalTempSuperconductors/Superconductors_Critical_Temp/Critical_Temperature_Predict.tex" "Critical_Temperature_Predict.pdf" "Critical_Temperature_Predict" 1710374984 0
-  "Critical_Temperature_Predict.aux" 1710374984 1537 c6692db69d1311f7888fd64254994719 "pdflatex"
-  "Critical_Temperature_Predict.out" 1710374984 969 82d65472359a03d26826630681dc0689 "pdflatex"
-  "Critical_Temperature_Predict.tex" 1710374983 10164 2b52d664e843db9fc4f687984cd4d68e ""
+["pdflatex"] 1710800006 "c:/Users/crist/Uni/GitHub_Projects/CriticalTempSuperconductors/Superconductors_Critical_Temp/Critical_Temperature_Predict.tex" "Critical_Temperature_Predict.pdf" "Critical_Temperature_Predict" 1710800007 0
+  "Critical_Temperature_Predict.aux" 1710800007 1537 80d53cbd75e90c4814298f29028292cd "pdflatex"
+  "Critical_Temperature_Predict.out" 1710800007 969 82d65472359a03d26826630681dc0689 "pdflatex"
+  "Critical_Temperature_Predict.tex" 1710800005 11085 8eb951d8c3e59aabeb19c0eff9ec3b9a ""
   "c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1697040386 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1697040387 1004 54797486969f23fa377b128694d548df ""
   "c:/Users/crist/AppData/Roaming/TinyTeX/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1697040387 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -81,8 +81,8 @@
   "c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1698856218 11524 308e6d34bcaa6771a1277e287930d629 ""
   "c:/Users/crist/AppData/Roaming/TinyTeX/texmf-var/web2c/pdftex/pdflatex.fmt" 1697040392 6774760 d7f64294213cb166744b09350810d74a ""
   "c:/Users/crist/AppData/Roaming/TinyTeX/texmf.cnf" 1697040413 956 bc725f1dae0ef3080944f5011089c94a ""
-  "c:/Users/crist/Uni/GitHub_Projects/CriticalTempSuperconductors/Superconductors_Critical_Temp/Critical_Temperature_Predict.tex" 1710374983 10164 2b52d664e843db9fc4f687984cd4d68e ""
-  "figure/unnamed-chunk-3-1.pdf" 1710374983 7628 80563a1b73dc08135d7e976f0d242bbe ""
+  "c:/Users/crist/Uni/GitHub_Projects/CriticalTempSuperconductors/Superconductors_Critical_Temp/Critical_Temperature_Predict.tex" 1710800005 11085 8eb951d8c3e59aabeb19c0eff9ec3b9a ""
+  "figure/unnamed-chunk-3-1.pdf" 1710800005 7628 5f18261227d43344d98b94e32c0c3e26 ""
   (generated)
   "Critical_Temperature_Predict.aux"
   "Critical_Temperature_Predict.log"

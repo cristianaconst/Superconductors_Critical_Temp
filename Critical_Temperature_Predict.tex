@@ -193,9 +193,19 @@ The main steps to the t-SNE algorithm are:
     \item Compute High-Dimensional Similarities
     
         The high-dimensional similarity refers to the calculation of the probability of an entry choosing another entry as its neighbour. The probability is calculated between each two points using the Gaussian Distribution as such:
-       $$p_{i|j} = \frac{exp(-\frac{||x_i - x_j||^2}{2\sigma_i^2})}{\sum_{k \neq i} exp(- \frac{||x_i - x_k||^2}{2\sigma_i^2})}$$
+        $$p_{i|j} = \frac{exp(-\frac{||x_i - x_j||^2}{2\sigma_i^2})}{\sum_{k \neq i} exp(- \frac{||x_i - x_k||^2}{2\sigma_i^2})}$$
+
+        The Gaussian distribution is centered around each $x_i$ and the variance $\sigma_i$ is determinated by the perplexity parameter. The perplexity is a hyperparameter that influences the balance between preserving local and global relationships in data. A perplexity is more or less a target number of neighbours for the central point $x_i$. A higher perplexity results in a higher varience and an emphasis on the global structure. While a lower perplexity focuses on the local structure.
+        
+        On the other hand, $||x_i - x_j||$ represents the Euclidean distance between the points $x_i$ and $x_j$ in the high-dimensional space.
 
     \item Compute Low-Dimensional Similarities
+    
+        The low dimension is the new space build using the pairwise similarity using the Student's t-distribution with a single degree of freedom:
+        $$q_{i|j} = \frac{(1 + ||y_i - y_j||^2)^{-1}}{\sum_{k \neq i} (1 + ||y_i - y_k||^2)^{-1}}$$
+
+        
+
     \item Optimize the Embedding
 \end{enumerate}
 
